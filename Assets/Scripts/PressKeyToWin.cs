@@ -5,9 +5,14 @@ using System.Collections;
 public class PressKeyToWin : MonoBehaviour {
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.ScrollLock))
+        if (Input.GetKey(KeyCode.ScrollLock))
         {
-            SceneManager.LoadScene("GameWinScene");
+            goToWinScene();
         }
+    }
+
+    public void goToWinScene()
+    {
+        SceneManager.LoadScene("GameWinScene");
     }
 }
